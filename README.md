@@ -45,6 +45,7 @@ python train.py -output_dir rpr --rpr
 ```
 You can additonally specify both a weight and print modulus that determine what epochs to save weights and what batches to print. The weights that achieved the best loss and the best accuracy (separate) are always stored in results, regardless of weight modulus input.
 
+**Modificated loss function**
 ![method](./figure/results.png)
 
 ### Evaluation
@@ -91,7 +92,7 @@ Note, multiple input models are separated with a '?'
 
 ![Accuracy Results Graph](./figure/accuracy_graph.png "Accuracy Results")
 
-![Learn Rate Results Graph](./figure/lr_graph.png, "Learn Rate Results")
+![Learn Rate Results Graph](./figure/lr_graph.png "Learn Rate Results")
 
 ## Discussion
 The results were overall close to the results from the paper. Huang et al. reported a loss of around 1.8 for the base and rpr models on Maestro V1. We use Maestro V2 and perform no midi augmentations as they had discussed in their paper. Furthermore, [there are issues with how sustain is handled](https://github.com/jason9693/midi-neural-processor/pull/2) which can be observed by listening to some pre-processed midi files. More refinement with the addition of those augmentations and fixes may yield the loss results in line with the paper.
