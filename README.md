@@ -46,6 +46,7 @@ python train.py -output_dir rpr --rpr
 You can additonally specify both a weight and print modulus that determine what epochs to save weights and what batches to print. The weights that achieved the best loss and the best accuracy (separate) are always stored in results, regardless of weight modulus input.
 
 **Modificated loss function**
+
 ![method](./figure/results.png)
 
 ### Evaluation
